@@ -179,14 +179,6 @@ resource "aws_security_group" "public" {
   }
 
   ingress {
-    description = "Allow HTTP"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["${var.ssh_location}/32"]
-  }
-
-  ingress {
     description = "Allow Request to Apache"
     from_port   = 8080
     to_port     = 8080
